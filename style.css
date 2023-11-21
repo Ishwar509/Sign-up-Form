@@ -1,0 +1,143 @@
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+.main {
+    display: flex;
+}
+
+.img-container {
+    width: 40%;
+}
+
+.img-container img {
+    width: max(100%, 600px);
+    height: 100%;
+    vertical-align: bottom;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: rgba(227, 227, 227, 0.2);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    padding-right: 150px;
+}
+
+.tagline p:first-child{
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.tagline p:last-child {
+    margin-top: 20px;
+}
+
+.form-container fieldset {
+    padding-left: 40px;
+    border: none;
+}
+
+form fieldset:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    height: 320px;
+    margin-bottom: 20px;
+    padding-right: 60px;
+    box-shadow: 0px 20px 15px -10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.form-container fieldset h2 {
+    width: 100%;
+    padding-top: 30px;
+}
+
+.form-container label {
+    display: block;
+    margin-right: 60px;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.form-container fieldset input {
+    width: 300px;
+    height: 30px;
+    font-size: 1rem;
+    margin-right: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.form-container fieldset button {
+    appearance: none;
+    border: none;
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    background-color: rgb(248, 171, 78, 0.7);
+}
+
+.form-container fieldset:last-child p {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.form-container fieldset button:hover {
+    border: 2px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    color: blue;
+}
+
+form input::placeholder {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input:invalid {
+    border: 1px solid red;
+}
+
+form input:valid {
+    border: 1px solid green;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    visibility: hidden;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: red;
+}
