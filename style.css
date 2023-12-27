@@ -136,7 +136,8 @@ form input:focus {
 }
 
 .error {
-    visibility: hidden;
+    width: 80%;
+    height: 20px;
     font-size: 0.8rem;
     font-weight: bold;
     color: red;

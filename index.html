@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    <script type="module" src="app.js" defer></script>
 </head>
 <body>
     <div class="main">
@@ -21,7 +21,7 @@
                 <p>Sign up to get started.</p>
             </div>
             <div class="form-container">
-                <form action="#" method="post">
+                <form action="#" method="post" novalidate>
                     <fieldset>
                         <h2>Let's do this!</h2>
                         <div>
@@ -30,33 +30,36 @@
                         </div>
                         
                         <div>
-                            <label for="lastName">Last Name</label>
-                            <input type="text" name="lastName" id="lastName" maxlength="20" placeholder="Ex : Doe">
+                            <label for="lastName">Last Name*</label>
+                            <input type="text" name="lastName" id="lastName" maxlength="20" placeholder="Ex : Doe" required>
                         </div>
                         
                         <div>
-                            <label for="userMail">E-mail*</label>
-                            <input type="email" name="userMail" id="userMail" maxlength="30" pattern="^[\w]+([\-\.][\w]+)*@[\w]+(\.[\w]{2,3})+$"
+                            <label for="mail">E-mail*</label>
+                            <input type="email" name="userMail" id="mail" maxlength="30" pattern="^[\w]+([\-\.][\w]+)*@[\w]+(\.[\w]{2,3})+$"
                                 placeholder="Ex : john-doe@gmail.com.co" required>
+                            <p class="error"></p>
                         </div>
                         
                         <div>
                             <label for="phoneNumber">Phone Number*</label>
-                            <input type="tel" name="phoneNumber" id="phoneNumber" pattern="[\d]{10}" 
+                            <input type="tel" name="phoneNumber" id="phoneNumber" pattern="^[\d]{10}$" maxlength="10"
                                 placeholder="Ex : 9876543210" required>
+                            <p class="error"></p>
                         </div>
                         
                         <div>
                             <label for="password">Password*</label>
                             <input type="password" name="userPassword" id="password" minlength="8" maxlength="16" 
                               placeholder="Password (8-16 characters)"  required>
+                            <p class="error"></p>
                         </div>
                         
                         <div>
                             <label for="confirm-password">Confirm Password*</label>
-                            <input type="password" name="confirm-password" id="confirm-password" 
+                            <input type="password" name="confirm-password" id="confirm-password" maxlength="16"
                                     placeholder="Re-enter your password" required>
-                            <p class="error">Password do not match</p>
+                            <p class="error"></p>
                         </div>
                     </fieldset>
                     <fieldset>
