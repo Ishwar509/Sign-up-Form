@@ -121,12 +121,12 @@ form input::placeholder {
     color: rgba(0, 0, 0, 0.4);
 }
 
-form input:invalid {
-    border: 1px solid red;
+form input:focus:invalid {
+    border: 2px solid red;
 }
 
-form input:valid {
-    border: 1px solid green;
+form input:focus:valid {
+    border: 2px solid green;
 }
 
 form input:focus {
